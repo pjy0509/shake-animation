@@ -1,4 +1,4 @@
-# Shake JS
+# Shake Animation
 ![NPM](https://nodei.co/npm/shake-animation.png?downloads=true&downloadRank=true&stars=true)<br>
 ![NPM Downloads](https://img.shields.io/npm/d18m/shake-animation?style=flat&logo=npm&logoColor=%23CB3837&label=Download&color=%23CB3837&link=https%3A%2F%2Fwww.npmjs.com%2Fpackage%2Feventlistener-manager) 
 ![GitHub Repo stars](https://img.shields.io/github/stars/pjy0509/shake-animation?style=flat&logo=github&logoColor=181717&label=Stars&color=181717&link=https%3A%2F%2Fgithub.com%2Fpjy0509%2Feventlistener-manager)<br> 
@@ -17,9 +17,11 @@ cdn
 ## Report errors and suggestions
 ### [Gmail](mailto:qkrwnss0509@gmail.com?subject=Report_errors_and_suggestions)
 ## Change log
-| Version | Log                                                                                                                   |
-|---------|-----------------------------------------------------------------------------------------------------------------------|
+| Version | Log           |
+|---------|---------------|
+| 1.0.1   | Update Readme |
 ## 1. Start shake animation
+### Start shake animation
 ```typescript
 let element = document.querySelector('.shake');
 let shake = new Shake(element); // create new and regist from Shake.instance
@@ -36,6 +38,15 @@ let shake = new Shake(element); // create new and regist from Shake.instance
 shake.start('horizontal', 'fast');
 // or
 document.querySelector('.shake').shake().start('horizontal', 'fast'); // get from Shake.instace if exiest or create new and regist from Shake.instance
+``` 
+### Start shake animation with animation speed and duration
+```typescript
+let element = document.querySelector('.shake');
+let shake = new Shake(element); // create new and regist from Shake.instance
+
+shake.start('horizontal', 'fast', 1000); // animation for 1s
+// or
+document.querySelector('.shake').shake().start('horizontal', 'fast', 1000); // get from Shake.instace if exiest or create new and regist from Shake.instance
 ``` 
 ## 2. Stop shake animation
 ```typescript

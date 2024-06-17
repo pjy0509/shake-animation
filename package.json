@@ -1,6 +1,6 @@
 {
   "name": "shake-animation",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "The shake-animation library is a versatile tool for managing CSS animations on HTML elements. It provides a straightforward API to apply a variety of predefined animations, including tilt, horizontal shake, vertical shake, jump, pulse, and blur, to HTML elements. The library ensures compatibility with different browsers by handling various CSS prefixes for animations and keyframes.",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
