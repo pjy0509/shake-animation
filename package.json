@@ -1,0 +1,46 @@
+{
+  "name": "shake-js",
+  "version": "1.0.0",
+  "description": "The Shake-js library is a versatile tool for managing CSS animations on HTML elements. It provides a straightforward API to apply a variety of predefined animations, including tilt, horizontal shake, vertical shake, jump, pulse, and blur, to HTML elements. The library ensures compatibility with different browsers by handling various CSS prefixes for animations and keyframes.",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "node build.js"
+  },
+  "author": "",
+  "license": "MIT",
+  "type": "module",
+  "main": "dist/index.cjs",
+  "require": "./dist/index.cjs",
+  "module": "dist/index.mjs",
+  "umd": "./dist/index.umd.js",
+  "types": "dist/index.d.ts",
+  "exports": {
+    ".": {
+      "import": "./dist/index.mjs",
+      "require": "./dist/index.cjs",
+      "umd": "./dist/index.umd.js",
+      "types": "./dist/index.d.ts"
+    }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/pjy0509/shake-js.git"
+  },
+  "homepage": "https://pjy0509.github.io/example/shake-js/",
+  "keywords": [
+    "css",
+    "animation",
+    "animations",
+    "shake"
+  ],
+  "devDependencies": {
+    "esbuild": "^0.21.4",
+    "glob": "^10.4.1",
+    "html-webpack-plugin": "^5.6.0",
+    "ts-loader": "^9.5.1",
+    "typescript": "^5.4.5"
+  },
+  "bugs": {
+    "url": "https://github.com/pjy0509/shake-js/issues"
+  }
+}
