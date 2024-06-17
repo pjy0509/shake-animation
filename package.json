@@ -1,7 +1,7 @@
 {
-  "name": "shake-js",
+  "name": "shake-animation",
   "version": "1.0.0",
-  "description": "The Shake-js library is a versatile tool for managing CSS animations on HTML elements. It provides a straightforward API to apply a variety of predefined animations, including tilt, horizontal shake, vertical shake, jump, pulse, and blur, to HTML elements. The library ensures compatibility with different browsers by handling various CSS prefixes for animations and keyframes.",
+  "description": "The shake-animation library is a versatile tool for managing CSS animations on HTML elements. It provides a straightforward API to apply a variety of predefined animations, including tilt, horizontal shake, vertical shake, jump, pulse, and blur, to HTML elements. The library ensures compatibility with different browsers by handling various CSS prefixes for animations and keyframes.",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "node build.js"
@@ -24,9 +24,9 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/pjy0509/shake-js.git"
+    "url": "git+https://github.com/pjy0509/shake-animation.git"
   },
-  "homepage": "https://pjy0509.github.io/example/shake-js/",
+  "homepage": "https://pjy0509.github.io/example/shake-animation/",
   "keywords": [
     "css",
     "animation",
@@ -41,6 +41,6 @@
     "typescript": "^5.4.5"
   },
   "bugs": {
-    "url": "https://github.com/pjy0509/shake-js/issues"
+    "url": "https://github.com/pjy0509/shake-animation/issues"
   }
 }
