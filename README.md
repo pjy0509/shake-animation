@@ -19,7 +19,7 @@ cdn
 ## Change log
 | Version | Log           |
 |---------|---------------|
-| 1.0.1   | Update Readme |
+| 1.0.2   | Update Readme |
 ## 1. Start shake animation
 ### Start shake animation
 ```typescript
@@ -47,6 +47,15 @@ let shake = new Shake(element); // create new and regist from Shake.instance
 shake.start('horizontal', 'fast', 1000); // animation for 1s
 // or
 document.querySelector('.shake').shake().start('horizontal', 'fast', 1000); // get from Shake.instace if exiest or create new and regist from Shake.instance
+``` 
+### Start shake animation `n` times
+```typescript
+let element = document.querySelector('.shake');
+let shake = new Shake(element); // create new and regist from Shake.instance
+
+shake.start('horizontal', 'fast', Shake.cycle(2)); // animation for 2 times
+// or
+document.querySelector('.shake').shake().start('horizontal', 'fast', Shake.cycle(2)); // get from Shake.instace if exiest or create new and regist from Shake.instance
 ``` 
 ## 2. Stop shake animation
 ```typescript

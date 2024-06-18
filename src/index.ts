@@ -8,6 +8,15 @@ export class Shake {
     static instance: Map<HTMLElement[], Shake> = new Map();
     static version = packageJSON.version;
 
+    static Cycle = class Cycle {
+        constructor(public number: number) {
+        }
+
+        getDuration(speed: ShakeSpeed): number {
+            return this.number * ({'slow': 1000, 'medium': 500, 'fast': 250}[speed]);
+        }
+    }
+
     private static animation: Animations = {
         'tilt': {
             0: {
@@ -255,10 +264,13 @@ export class Shake {
         }
     }
 
-    start(key: ShakeAnimation, speed: ShakeSpeed = 'slow', duration?: number) {
+    start(key: ShakeAnimation, speed: ShakeSpeed = 'slow', duration?: number | InstanceType<typeof Shake.Cycle>) {
         for (const element of this.target) {
             this.activeKey = 'data-shake-' + key + '-' + speed;
             element.setAttribute(this.activeKey, 'true');
+            if (duration instanceof Shake.Cycle) {
+                duration = duration.getDuration(speed);
+            }
             if (duration) {
                 setTimeout(() => {
                     this.stop();
@@ -275,6 +287,10 @@ export class Shake {
             void element.offsetHeight;
         }
         Shake.instance.delete(this.target);
+    }
+
+    static cycle(number: number) {
+        return new Shake.Cycle(number);
     }
 
     static fromInstance(args: any): Shake | undefined {
